@@ -1,0 +1,206 @@
+*{
+    margin: 1px;
+    padding: 10px;
+    font-family: 'poppins',sans-serif;
+    box-sizing: content-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: black ;
+    color: rgb(247, 235, 237);
+}
+#header{
+    width: 100%;
+    height: 100%;
+    background-image: url(https://www.giantfreakinrobot.com/wp-content/uploads/2020/01/elon-musk-900x600.jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.container{
+    padding: 8px 8px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin:  10px 20px;
+
+}
+nav ul li a{
+    color:white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: yellow;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    font-size: 40px;
+    margin-top: 20px;
+}
+header-text h1 span{
+    color: rgb(35, 20, 202);
+}
+/* -----------About-------- */
+#about{
+    padding: 80px 0;
+    color: brown;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col1{
+    flex-basis: 35%;
+}
+.about-col2{
+    flex-basis: 40%;
+}    
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: antiquewhite;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: yellow;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 80%;
+}
+.tab-contents ul li{
+    list-style: circle;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: rgb(43, 226, 46);
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: inline-block;
+}
+/* -----------services---------------------------------------------------------------- */
+#service{
+    padding: 30px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 30px;
+    margin-top: 40px;
+    padding: 10px;
+}
+.services-list div{
+    background:orange;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 15px;
+    transition: transform 0.5s;
+}
+.services-list div i{
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+.services-list div:hover{
+    background-color: greenyellow;
+    transform: translateY(-10px);
+}
+/* ---------------------------portfolio------------------------------------------------ */
+#portfolio{
+    padding: 50px o;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 30px;
+    margin-top: 40px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: rgb(209, 33, 173);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px; 
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+/* ----------------contact-------------- */
+.row{
+    flex-basis: 35%;
+    margin-top: 30px;
+}
